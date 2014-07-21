@@ -56,5 +56,12 @@ TEST_USER     = 'test-user'
 TEST_PASSWORD = 'password'
 COVERAGE_MIN  = 90
 
+ROOT_USER = Mongo::Auth::User.new(
+  database: 'admin',
+  user: 'root-user',
+  password: 'password',
+  roles: [ Mongo::Auth::Roles::ROOT ]
+)
+
 # require all shared examples
 Dir['./spec/support/shared/*.rb'].sort.each { |file| require file }
