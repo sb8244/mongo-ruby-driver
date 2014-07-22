@@ -13,11 +13,8 @@
 # limitations under the License.
 
 module Mongo
-
   module Operation
-
     module Write
-
       module WriteCommand
 
         # Provides common behavior for all write commands.

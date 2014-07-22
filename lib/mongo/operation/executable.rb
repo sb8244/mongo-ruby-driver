@@ -58,7 +58,7 @@ module Mongo
           raise Exception, "Must use primary server"
         end
         context.with_connection do |connection|
-          connection.dispatch([message])
+          connection.dispatch([ message ])
         end
       end
 
